@@ -94,20 +94,25 @@ class TransaksiScreen extends ConsumerWidget {
                           ),
                       ],
                     ),
-                    trailing: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.end,
+                    trailing: Row(
+                      mainAxisSize: MainAxisSize.min,
                       children: [
-                        Text(
-                          _formatCurrency(transaksi.nominal),
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: transaksi.jenis == 'Pemasukan'
-                                ? Colors.green
-                                : Colors.red,
+                        Flexible(
+                          child: Text(
+                            _formatCurrency(transaksi.nominal),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: transaksi.jenis == 'Pemasukan'
+                                  ? Colors.green
+                                  : Colors.red,
+                            ),
                           ),
                         ),
                         PopupMenuButton<String>(
+                          padding: EdgeInsets.zero,
+                          constraints: const BoxConstraints(minWidth: 140),
                           onSelected: (value) {
                             if (value == 'edit') {
                               _editTransaksi(context, transaksi);
@@ -153,12 +158,8 @@ class TransaksiScreen extends ConsumerWidget {
   }
 
   String _formatCurrency(int amount) {
-    final formatter = NumberFormat.currency(
-      locale: 'id_ID',
-      symbol: 'Rp ',
-      decimalDigits: 0,
-    );
-    return formatter.format(amount);
+    final formatter = NumberFormat('#,###');
+    return 'Rp ${formatter.format(amount)}';
   }
 
   void _addTransaksi(BuildContext context) {

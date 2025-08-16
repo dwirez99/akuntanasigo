@@ -1,16 +1,46 @@
-# akuntansigo
+Bagus! Berikut adalah rancangan awal aplikasi manajemen keuangan untuk instansi yang mencakup fitur yang kamu butuhkan:
 
-A new Flutter project.
+---
 
-## Getting Started
+### 🧩 **Fitur Utama Aplikasi**
 
-This project is a starting point for a Flutter application.
+1. **Manajemen Kategori (CRUD)**
 
-A few resources to get you started if this is your first Flutter project:
+   * Tambah/Edit/Hapus/Lihat kategori
+   * Contoh kategori: Pembangunan, Sumbangan, Dana BOS, Event, dll.
+   * Kategori dibagi untuk pemasukan dan pengeluaran (bisa juga shared)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+2. **Manajemen Pemasukan dan Pengeluaran (CRUD)**
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+   * Tambah/Edit/Hapus/Lihat transaksi
+   * Field: Tanggal, Kategori, Nominal, Keterangan
+   * Upload bukti transaksi (opsional)
+
+3. **Analisis Keuangan**
+
+   * Grafik perbandingan pemasukan vs pengeluaran
+   * Ringkasan bulanan/tahunan
+   * Kategori dengan pengeluaran/pemasukan tertinggi
+
+4. **Laporan Keuangan (PDF)**
+
+   * Filter berdasarkan tanggal dan/atau kategori
+   * Laporan transaksi dan ringkasan analisis
+   * Unduh sebagai PDF
+
+
+### 🧮 **STACK**
+front-end = flutter
+backend = flutter
+Database = Sqlite
+
+---
+
+### 🧪 **Fitur Tambahan Opsional**
+
+* Autentikasi pengguna dan level akses (admin/bendahara)
+* Ekspor CSV/Excel
+* Reminder jika pengeluaran melebihi batas
+
+---
+

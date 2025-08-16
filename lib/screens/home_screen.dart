@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'dashboard_screen.dart';
 import 'kategori_screen.dart';
 import 'transaksi_screen.dart';
+import 'analisis_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -13,7 +15,9 @@ class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
 
   final List<Widget> _screens = [
+    const DashboardScreen(),
     const TransaksiScreen(),
+    const AnalisisScreen(),
     const KategoriScreen(),
   ];
 
@@ -28,10 +32,19 @@ class _HomeScreenState extends State<HomeScreen> {
             _selectedIndex = index;
           });
         },
+        type: BottomNavigationBarType.fixed,
         items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.dashboard),
+            label: 'Dashboard',
+          ),
           BottomNavigationBarItem(
             icon: Icon(Icons.receipt_long),
             label: 'Transaksi',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.analytics),
+            label: 'Analisis',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.category),
