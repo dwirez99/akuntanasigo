@@ -1,5 +1,6 @@
-Bagus! Berikut adalah rancangan awal aplikasi manajemen keuangan untuk instansi yang mencakup fitur yang kamu butuhkan:
-
+** AkuntansiGO **
+---
+*Aplikasi Pencatatan Pemasukan dan Pengeluaran Keuangan Sederhana*
 ---
 
 ### 🧩 **Fitur Utama Aplikasi**
