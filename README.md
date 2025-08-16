@@ -1,4 +1,4 @@
-** AkuntansiGO **
+**AkuntansiGO**
 ---
 *Aplikasi Pencatatan Pemasukan dan Pengeluaran Keuangan Sederhana*
 ---
